@@ -16,16 +16,16 @@ const App = () => {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Switch>
-          <Route path="/movies/:id">
+          <Route exact path="/movies/:id">
             <MovieInformation />
           </Route>
-          <Route path="/actors/:id">
+          <Route exact path="/actors/:id">
             <Actors />
           </Route>
-          <Route path="/">
+          <Route exact path={["/", "approved"]}>
             <Movies />
           </Route>
-          <Route path="/profile/:id">
+          <Route exact path="/profile/:id">
             <Profile />
           </Route>
         </Switch>
